@@ -1,8 +1,8 @@
-# Recipe Blog System
+# Recipe Request System
 
 ## Introduction
 
-Welcome to the Recipe Blog project, developed using ASP.NET Core with Entity Framework Core and Oracle Database. This repository contains the system documentation for a web application designed to simplify recipe searching and management.
+Welcome to the Recipe Request project, developed using ASP.NET Core with Entity Framework Core and Oracle Database. This repository contains the system documentation for a web application designed to simplify recipe searching and management.
 
 ### Objectives
 
