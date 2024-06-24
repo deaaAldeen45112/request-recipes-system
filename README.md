@@ -92,7 +92,7 @@ To set up and run the project locally:
 
 ## Additional Features
 
-- **PDF Generation**: We use the `wkhtmltopdf` tool to generate beautiful PDFs for recipes.
+- **PDF Generation**: We use the `wkhtmltopdf` tool to generate beautiful PDFs for recipes and invoices.
 - **Security Enhancements**: 
   - Password hashing for secure user authentication.
   - Forget password functionality with email verification.
