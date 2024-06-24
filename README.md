@@ -17,6 +17,7 @@ The Recipe Blog aims to provide users with a convenient platform to discover and
 5. [Project Details](#project-details)
    - [Programming Language and Technologies](#programming-language-and-technologies)
    - [Setup and Installation](#setup-and-installation)
+6. [Additional Features](#additional-features)
 
 ## User Roles
 
@@ -88,3 +89,12 @@ To set up and run the project locally:
 5. Ensure Oracle Data Provider for .NET (ODP.NET) is installed on your development environment.
 6. Run Entity Framework Core migrations to create or update the database schema.
 7. Build and run the project.
+
+## Additional Features
+
+- **PDF Generation**: We use the `wkhtmltopdf` tool to generate beautiful PDFs for recipes.
+- **Security Enhancements**: 
+  - Password hashing for secure user authentication.
+  - Forget password functionality with email verification.
+  - Email verification for new user registrations.
+- **Rate Limiter**: Implemented to protect the system from abuse and ensure fair usage.
