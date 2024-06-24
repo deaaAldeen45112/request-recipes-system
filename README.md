@@ -60,6 +60,7 @@ The system supports the following user roles:
 ## Workflow Charts
 
 Detailed workflow diagrams are available in the project's documentation.
+![image](https://github.com/deaaAldeen45112/request-recipes-system/assets/99683685/30ae287c-922a-44f1-9232-723791a179fd)
 
 ## Interface Design
 
