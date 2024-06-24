@@ -1,0 +1,174 @@
+﻿
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cake Template">
+    <meta name="keywords" content="Cake, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/home/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/home/css/style.css" type="text/css">
+   
+</head>
+
+<body>
+
+@*
+    <img src="@Url.Content("~/home/img/food-wallpapers.jpg")" alt="Your Image">
+
+*@
+    @model Recipe
+    <!-- Blog Hero Begin -->
+    <div class="blog-hero set-bg" style="background-image: url(&quot;/recipesImage/@Model.RecipeMainImgPath&quot;);">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-7">
+                    <div class="blog__hero__text">
+                        <div class="label">Recipes</div>
+                        <h2>@Model.RecipeName</h2>
+                        <ul>
+                            <li>By <span>@Model.Chief.User.UserName</span></li>
+                            <li>@Model.CreatedAt</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Hero End -->
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+
+                        <div class="blog__details__text">
+                            <p>
+                                @Model.RecipeDescription
+                            </p>
+                            <p>
+
+                            </p>
+                        </div>
+                        <div class="blog__details__recipe">
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="img/blog/details/user.png" alt=""> SERVES</h6>
+                                <span>@Model.RecipeServings minutes</span>
+                            </div>
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="img/blog/details/clock.png" alt=""> PREP TIME</h6>
+                                <span>@Model.RecipePreparingTimeMinutes minutes</span>
+                            </div>
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="img/blog/details/clock.png" alt=""> COOK TIME</h6>
+                                <span>@Model.RecipeCookingTimeMinutes minutes</span>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                          <br/>
+                        <br/>
+                        <div class="blog__details__recipe__details">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="blog__details__ingredients">
+                                        <h6>Ingredients</h6>
+                                        <ul>
+                                            @{
+                                                foreach (var ingrd in Model.Ingredients)
+                                                {
+                                                    <li><span>.</span> @ingrd.IngredientQuantity @ingrd.IngredientUnit.IngredientUnitName @ingrd.IngredientCustomName</li>
+
+                                                }
+
+                                            }
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="blog__details__direction">
+                            <h6>Directions</h6>
+                            <ul>
+
+                                @{
+                                    int count = 0;
+                                    foreach (var prep in Model.RecipePreparationSteps)
+                                    {
+                                        count++;
+                                        <li>
+                                            <span>@count .</span> @prep.RecipePreparationStepDescription
+                                        </li>
+
+                                    }
+
+                                }
+
+
+
+                            </ul>
+                        </div>
+                        <div class="blog__details__direction">
+                            <h6>Notes</h6>
+                            <ul>
+
+                                @{
+                                    int countNotes = 0;
+
+                                    foreach (var prep in Model.RecipeNotes)
+                                    {
+                                        countNotes++;
+                                        <li>
+                                            <span>@countNotes .</span> @prep.RecipeNoteDescription
+                                        </li>
+
+                                    }
+
+                                }
+
+
+
+                            </ul>
+                        </div>
+      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
