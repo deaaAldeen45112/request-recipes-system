@@ -18,6 +18,7 @@ The Recipe Blog aims to provide users with a convenient platform to discover and
    - [Programming Language and Technologies](#programming-language-and-technologies)
    - [Setup and Installation](#setup-and-installation)
 6. [Additional Features](#additional-features)
+7. [Video Presentation](#video-presentation)
 
 ## User Roles
 
@@ -98,3 +99,7 @@ To set up and run the project locally:
   - Forget password functionality with email verification.
   - Email verification for new user registrations.
 - **Rate Limiter**: Implemented to protect the system from abuse and ensure fair usage.
+  
+## Video Presentation
+A video presentation demonstration of the project setup is available on YouTube:  
+[Watch the Video Presentation](https://www.youtube.com/watch?v=92un0H5zCOc)
